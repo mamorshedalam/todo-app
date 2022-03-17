@@ -1,0 +1,185 @@
+/* ========== FONT FAMILY LINK ========== */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap"); /* ========== DEFAULT STYLE ========== */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #c2c2c2;
+  font-size: 15px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  outline: none !important;
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container {
+  background-color: #ffffff;
+  position: relative;
+  text-align: center;
+  width: 350px;
+  height: 500px;
+}
+.app-title {
+  font-weight: 800;
+  padding-top: 5px;
+  font-size: 31px;
+}
+.time-toggle {
+  position: relative;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+.time-toggle button {
+  position: absolute;
+  top: 15px;
+  background-color: transparent;
+  border: 1px solid #d8d8d8;
+  border-radius: 25px;
+  padding: 7px 25px;
+  width: 100px;
+}
+.time-toggle button:first-child {
+  left: 46%;
+}
+.time-toggle button:last-child {
+  right: 46%;
+}
+.active-btn {
+  background-color: #4e81df !important;
+  color: #ffffff !important;
+  border-color: #4e81df !important;
+  z-index: 99 !important;
+}
+.nav {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+}
+.nav button {
+  width: 50%;
+  padding: 7px 0;
+  border: 1px solid #d8d8d8;
+}
+.todo {
+  background-color: #eeecec;
+  height: 65%;
+  overflow: hidden;
+}
+.todo ul {
+  padding-top: 17px;
+}
+.todo ul li {
+  list-style: none;
+  display: flex;
+  padding: 7px 10px;
+  background-color: #ffffff;
+  margin: 0 15px 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+.todo ul li .complete-icon {
+  background-color: #2ddd53;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.todo ul li p {
+  font-size: 14px;
+  overflow: hidden;
+}
+.todo ul li span {
+  font-size: 12px;
+  margin-left: auto;
+}
+.todo .incomplete-list .complete-icon {
+  margin-right: 10px;
+}
+.todo .complete-list .complete-icon {
+  background-color: #dd472d;
+  margin-left: 10px;
+}
+.add-item {
+  position: absolute;
+  background-color: #eeecec;
+  bottom: 0;
+  width: 100%;
+  height: 355px;
+  z-index: 999;
+  text-align: left;
+  padding: 15px 25px;
+}
+.add-item button {
+  background-color: #dd472d;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.add-item h3 {
+  text-align: center;
+  padding: 10px 0;
+}
+.add-item .form-group label {
+  color: #3d3d3d;
+  font-size: 11px;
+  font-weight: 700;
+}
+.add-item .form-group input {
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8;
+  padding: 7px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.add-item .form-group:nth-child(3) {
+  text-align: center;
+}
+.add-item .form-group input[type="text"] {
+  width: 100%;
+}
+.add-item .form-group input[type="time"] {
+  width: 50%;
+}
+.add-item .form-group input[type="submit"] {
+  width: 50%;
+  cursor: pointer;
+}
+.add-item .form-group input[type="submit"]:hover {
+  background-color: #4e81df;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+.add-item p {
+  font-size: 11px;
+  color: #2ddd53;
+  text-align: center;
+}
+.add {
+  position: absolute;
+  background-color: #4e81df;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+.add button {
+  color: #ffffff;
+  font-size: 34px;
+}

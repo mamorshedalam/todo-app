@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Do To App</title>
+     <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+     <!-- ========== CONTAINER ========== -->
+     <div class="container">
+          <h1 class="app-title">TO DO APP</h1>
+          <div class="time-toggle">
+               <button class="show-all" onclick="activeClass('.show-today', '.show-all')">All</button>
+               <button class="show-today active-btn" onclick="activeClass('.show-all', '.show-today')">Today</button>
+          </div>
+          <h2 class="current-date">4th March 2020</h2>
+          <div class="nav">
+               <button class="incomplete-btn active-btn" onclick="displayToggle('.incomplete-list', '.complete-list'); activeClass('.complete-btn', '.incomplete-btn')">Incomplete</button>
+               <button class="complete-btn" onclick="displayToggle('.complete-list', '.incomplete-list'); activeClass('.incomplete-btn', '.complete-btn')">Complete</button>
+          </div>
+          <div class="todo">
+               <ul class="incomplete-list">
+               </ul>
+               <ul class="complete-list" style="display: none;">
+               </ul>
+          </div>
+          <div class="add">
+               <button class="add-btn" onclick="displayToggle('.add-item', '.add')">&plus;</button>
+          </div>
+          <div class="add-item" style="display: none;">
+               <button class="complete-icon" onclick="displayToggle('.add', '.add-item')">&Cross;</button>
+               <h3>Add Your Work</h3>
+               <form>
+                    <div class="form-group">
+                         <label for="todo-title">Title:</label><br />
+                         <input id="todo-title" class="input-field" type="text" placeholder="Title" required>
+                    </div>
+                    <div class="form-group">
+                         <label for="todo-time">Time:</label><br />
+                         <input id="todo-time" class="input-field" type="time" required>
+                    </div>
+                    <div class="form-group">
+                         <input id="submit-btn" class="input-field" type="submit">
+                    </div>
+               </form>
+          </div>
+     </div>
+     <!-- ========== CONTAINER END ========== -->
+     <script src="assets/js/script.js"></script>
+</body>
+
+</html>
