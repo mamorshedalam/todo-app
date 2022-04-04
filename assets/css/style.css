@@ -1,14 +1,40 @@
 /* ========== FONT FAMILY LINK ========== */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap"); /* ========== DEFAULT STYLE ========== */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap");
+
+/* ========== ROOT ========== */
+:root {
+  --C-RGB: rgba(0, 0, 0, 0.5);
+  --C-ASH: #3d3d3d;
+  --C-RED: #dd472d;
+  --C-GREEN: #2ddd53;
+  --C-BLUE: #4e81df;
+  --C-MILK: #eeecec;
+  --C-LIGHT: #d8d8d8;
+  --C-WHITE: #ffffff;
+  --FW-BLACK: 800;
+}
+/* ========== DEFAULT STYLE ========== */
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #c2c2c2;
-  font-size: 15px;
-  display: flex;
-  width: 100%;
-  height: 100vh;
+  background-image: url(./../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   justify-content: center;
   align-items: center;
+  position: relative;
+  font-size: 15px;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+body::before {
+  background-color: var(--C-RGB);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
 }
 * {
   outline: none !important;
@@ -21,97 +47,101 @@ button {
   border: none;
   cursor: pointer;
 }
+
+/* ========== CONTAINER ========== */
 .container {
-  background-color: #ffffff;
+  background-color: var(--C-WHITE);
   position: relative;
   text-align: center;
-  width: 350px;
   height: 500px;
+  width: 95%;
+  max-width: 400px;
 }
 .app-title {
-  font-weight: 800;
+  font-weight: var(--FW-BLACK);
   padding-top: 5px;
   font-size: 31px;
 }
-.time-toggle {
+
+.time-div {
   position: relative;
-  margin-bottom: 60px;
   justify-content: center;
+  margin-bottom: 60px;
 }
-.time-toggle button {
+.time-div button {
   position: absolute;
   top: 15px;
   background-color: transparent;
-  border: 1px solid #d8d8d8;
+  border: 1px solid var(--C-LIGHT);
   border-radius: 25px;
   padding: 7px 25px;
   width: 100px;
 }
-.time-toggle button:first-child {
+.time-div button:first-child {
   left: 46%;
 }
-.time-toggle button:last-child {
+.time-div button:last-child {
   right: 46%;
 }
 .active-btn {
-  background-color: #4e81df !important;
-  color: #ffffff !important;
-  border-color: #4e81df !important;
+  background-color: var(--C-BLUE) !important;
+  border-color: var(--C-BLUE) !important;
+  color: var(--C-WHITE) !important;
   z-index: 99 !important;
 }
-.nav {
+.menu {
   display: flex;
   padding-top: 10px;
   justify-content: center;
 }
-.nav button {
+.menu button {
   width: 50%;
   padding: 7px 0;
-  border: 1px solid #d8d8d8;
+  border: 1px solid var(--C-LIGHT);
 }
 .todo {
-  background-color: #eeecec;
+  background-color: var(--C-MILK);
   height: 65%;
   overflow: hidden;
 }
-.todo ul {
+.todo-div ul {
   padding-top: 17px;
 }
-.todo ul li {
+.todo-div ul li {
   list-style: none;
   display: flex;
   padding: 7px 10px;
-  background-color: #ffffff;
+  background-color: var(--C-WHITE);
   margin: 0 15px 10px;
   border-radius: 5px;
   font-weight: 700;
-  box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 15px -5px var(--C-RGB);
 }
-.todo ul li .complete-icon {
-  background-color: #2ddd53;
-  color: #ffffff;
+.todo-div ul li .complete-icon {
+  background-color: var(--C-GREEN);
+  color: var(--C-WHITE);
   border-radius: 50%;
   width: 20px;
   height: 20px;
 }
-.todo ul li p {
+.todo-div ul li p {
   font-size: 14px;
   overflow: hidden;
 }
-.todo ul li span {
+.todo-div ul li span {
   font-size: 12px;
   margin-left: auto;
 }
-.todo .incomplete-list .complete-icon {
+.todo-div .incomplete-list .complete-icon {
   margin-right: 10px;
 }
-.todo .complete-list .complete-icon {
-  background-color: #dd472d;
+.todo-div .complete-list .complete-icon {
+  background-color: var(--C-RED);
   margin-left: 10px;
 }
-.add-item {
+.add-div {
   position: absolute;
-  background-color: #eeecec;
+  background-color: var(--C-MILK);
   bottom: 0;
   width: 100%;
   height: 355px;
@@ -119,9 +149,9 @@ button {
   text-align: left;
   padding: 15px 25px;
 }
-.add-item button {
-  background-color: #dd472d;
-  color: #ffffff;
+.add-div button {
+  background-color: var(--C-RED);
+  color: var(--C-WHITE);
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -129,57 +159,59 @@ button {
   right: 10px;
   top: 10px;
 }
-.add-item h3 {
+.add-div h3 {
   text-align: center;
   padding: 10px 0;
 }
-.add-item .form-group label {
-  color: #3d3d3d;
+.add-div .form-group label {
+  color: var(--C-ASH);
   font-size: 11px;
   font-weight: 700;
 }
-.add-item .form-group input {
-  background-color: #ffffff;
-  border: 1px solid #d8d8d8;
+.add-div .form-group input {
+  background-color: var(--C-WHITE);
+  border: 1px solid var(--C-LIGHT);
   padding: 7px 15px;
   border-radius: 5px;
   margin-bottom: 15px;
 }
-.add-item .form-group:nth-child(3) {
+.add-div .form-group:nth-child(3) {
   text-align: center;
 }
-.add-item .form-group input[type="text"] {
+.add-div .form-group input[type="text"] {
   width: 100%;
 }
-.add-item .form-group input[type="time"] {
+.add-div .form-group input[type="time"] {
   width: 50%;
 }
-.add-item .form-group input[type="submit"] {
+.add-div .form-group input[type="submit"] {
   width: 50%;
   cursor: pointer;
 }
-.add-item .form-group input[type="submit"]:hover {
-  background-color: #4e81df;
-  color: #ffffff;
+.add-div .form-group input[type="submit"]:hover {
+  background-color: var(--C-BLUE);
+  color: var(--C-WHITE);
   transition: all 0.5s;
 }
-.add-item p {
+.add-div p {
   font-size: 11px;
-  color: #2ddd53;
+  color: var(--C-GREEN);
   text-align: center;
 }
 .add {
   position: absolute;
-  background-color: #4e81df;
+  background-color: var(--C-BLUE);
   border-radius: 50%;
   width: 40px;
   height: 40px;
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 15px -5px var(--C-RGB);
 }
 .add button {
-  color: #ffffff;
+  color: var(--C-WHITE);
   font-size: 34px;
 }
+
+/* ========== CONTAINER END ========== */
