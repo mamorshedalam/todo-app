@@ -28,6 +28,4 @@ ToDo App is a simple activity & task management system made with Vanilla Javascr
  - Click right if the activity or task is complete
  - Click cross to delete the completed activity or task
 
-Live link : https://rms-v1.herokuapp.com/
-
-Dashboard Link: https://rms-v1.herokuapp.com/dashboard/
+Live link : https://mamorshedalam.github.io/todo-app/
