@@ -8,6 +8,27 @@ ToDo App is a simple activity & task management system made with Vanilla Javascr
 - See and delete activity or task
 
 
+### Installation
+
+1. Clone repository
+
+```bash
+https://github.com/mamorshedalam/todo-app.git
+```
+
+2. Go to the folder
+
+```bash
+cd todo-app
+```
+
+3. Open browser
+
+```bash
+double click index.html
+```
+
+
 #### Technology:
 
  - HTML5
